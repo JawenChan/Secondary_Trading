@@ -1,1 +1,5 @@
 /* pages/search/search.wxss */
+.search{
+  position: relative;
+  top: 100rpx;
+}
