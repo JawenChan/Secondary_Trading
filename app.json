@@ -1,7 +1,7 @@
 {
   "pages":[
-    "pages/my/my",
     "pages/search/search",
+    "pages/my/my",
     "pages/sale/sale",
     "pages/chat/chat",
     "pages/logs/logs"
@@ -15,31 +15,31 @@
   "tabBar": {
     "color": "#000000",
     "selectedColor": "#ff2a4d",
-    "backgroundColor": "#fafafa",
-    "borderStyle": "black",
+    "backgroundColor": "#F5F5F5",
+    "borderStyle": "white",
     "list": [{
       "pagePath": "pages/search/search",
-      "text": "主页",
-      "iconPath": "",
-      "selectedIconPath": ""
+      "text": "搜 索",
+      "iconPath": "/icon/搜索未选择.png",
+      "selectedIconPath": "/icon/搜索已选择.png"
     },
     {
       "pagePath": "pages/sale/sale",
-      "text": "发布",
-      "iconPath": "",
-      "selectedIconPath": ""
+      "text": "发 布",
+      "iconPath": "/icon/发布未选择.png",
+      "selectedIconPath": "/icon/发布已选择.png"
     },
     {
       "pagePath": "pages/chat/chat",
-      "text": "咨询",
-      "iconPath": "",
-      "selectedIconPath": ""
+      "text": "聊 天",
+      "iconPath": "/icon/聊天未选择.png",
+      "selectedIconPath": "/icon/聊天已选择.png"
     },
     {
       "pagePath": "pages/my/my",
-      "text": "我的",
-      "iconPath": "",
-      "selectedIconPath": ""
+      "text": "我 的",
+      "iconPath": "/icon/我的未选择.png",
+      "selectedIconPath": "/icon/我的已选择.png"
     }]
   },
   "style": "v2",

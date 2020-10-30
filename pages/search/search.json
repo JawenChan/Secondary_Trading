@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "主页"
+  "usingComponents": {
+    "l-search-bar": "/dist/search-bar/index"
+    
+  },
+  "navigationBarTitleText": "二 手 书 搜 搜"
 }
