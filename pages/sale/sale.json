@@ -1,4 +1,8 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "l-input": "/dist/input/index",
+    "l-button":"/dist/button/index",
+    "l-image-picker":"/dist/image-picker/index"
+  },
   "navigationBarTitleText": "发布页面"
 }

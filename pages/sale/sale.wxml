@@ -1,1 +1,14 @@
 <!--发布闲置窗口-->
+<view>
+	<l-input label="书名" type="" placeholder="请输入书名" />
+	<l-input label="作者" type="" placeholder="请输入书作者" />
+	<l-input label="isbn" type="" placeholder="请输入数字" />
+	<l-input label="课程" type="" placeholder="请输入课程" />
+	<l-input label="价格" type="number" placeholder="请输入出售价格" />
+	<l-input label="几成新" type="" placeholder="请输入该书新旧程度" />
+	<!-- <l-button type="default" bindtap="addPicture">添加图片</l-button> -->
+	<l-image-picker size="4" count="4" bind:linchange="addPictures" size-type="compressed" />
+	<view>
+		<l-button type="success" size="mini" bind:getuserinfo="getUserInfo" open-type="getUserInfo">success</l-button>
+	</view>
+</view>

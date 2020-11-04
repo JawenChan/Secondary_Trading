@@ -1,2 +1,8 @@
 <!--搜索窗口-->
-<l-search-bar class="search" show-cancel="{{false}}" placeholder="搜索" bg-color="#0" bind:linconfirm="search" shape="circle" />
+<view>
+	<view>
+		<l-search-bar class="search" show-cancel="{{false}}" placeholder="搜索" bg-color="#0" bind:linconfirm="search" shape="circle" />
+	</view>
+	<view>\n </view>
+	<text>选择校区</text>
+</view>
