@@ -1,5 +1,23 @@
 /* pages/search/search.wxss */
+page{
+  background-image: url("https://7765-weiji-r9iia-1302671935.tcb.qcloud.la/%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90/%E6%90%9C%E7%B4%A2%E9%A1%B5%E9%9D%A2/%E8%83%8C%E6%99%AF%E5%9B%BE.jpg?sign=1ae4df7c5a44d54fc8dbd89c910d3a4b&t=1604318636");
+}
 .search{
   position: relative;
-  top: 100rpx;
+  top: 160rpx;
+  
+}
+.picker{
+  position: relative;
+  top: 180rpx;
+  text-align: center;
+  color: azure;
+  font-size: 50rpx;
+
+}
+
+.n{
+  height: 750rpx;
+  background-color: beige;
+  position: relative;
 }
