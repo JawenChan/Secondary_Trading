@@ -3,21 +3,56 @@ page{
   background-image: url("https://7765-weiji-r9iia-1302671935.tcb.qcloud.la/%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90/%E6%90%9C%E7%B4%A2%E9%A1%B5%E9%9D%A2/%E8%83%8C%E6%99%AF%E5%9B%BE.jpg?sign=1ae4df7c5a44d54fc8dbd89c910d3a4b&t=1604318636");
 }
 .search{
-  position: relative;
-  top: 160rpx;
+  position: absolute;
+  top: 75rpx;
+  left: 100rpx;
+  width: 400rpx;
   
 }
 .picker{
-  position: relative;
-  top: 180rpx;
+  position: absolute;
+  top: 95rpx;
+  left: 25rpx;
   text-align: center;
-  color: azure;
-  font-size: 50rpx;
-
+  color: red;
+  font-size: 20rpx;
+  background-color: seagreen;
 }
 
 .n{
   height: 750rpx;
   background-color: beige;
   position: relative;
+}
+
+.swiper{
+  height: 250rpx;
+  width: 670rpx;
+  background-color: rgb(68, 248, 188);
+  position: absolute;
+  left:40rpx;
+  top: 300rpx;
+}
+.head{
+  width: 750rpx;
+  height: 475rpx;
+  background-color: cornsilk;
+}
+
+.image1{
+  height: 250rpx;
+  width: 670rpx;
+  background-color: cadetblue;
+  position: absolute;
+  left:40rpx;
+  top: 600rpx;
+}
+
+.image2{
+  height: 250rpx;
+  width: 670rpx;
+  background-color: cadetblue;
+  position: absolute;
+  left:40rpx;
+  top: 900rpx;
 }
