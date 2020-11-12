@@ -1,5 +1,5 @@
 <!--搜索窗口-->
-<image class="head"></image>
+<image class="head" src="https://7765-weiji-r9iia-1302671935.tcb.qcloud.la/search-pages/background/shujia_shuji-008.jpg?sign=6884b131393be77c70ecbbc02d34f863&t=1605196412"></image>
 <swiper class="swiper" circular="true" >
   <block wx:for="{{array}}">
     <swiper-item>
@@ -12,7 +12,7 @@
 <view>
   <l-search-bar class="search" show-cancel="{{false}}" placeholder="书名/作者/ISBN" bind:linconfirm="search"  shape="circle" />
 </view>
-<picker class="picker" mode="selector">选 择 校 区</picker>
+<picker class="picker" mode="selector">校 区</picker>
 
 <view class="image1">
   <image> </image>
@@ -20,4 +20,9 @@
 
 <view class="image2">
   <image> </image>
+</view>
+
+<view class="Appname">
+  <text class="name">555</text>
+  <text class="tatoo">因为热爱</text>
 </view>
