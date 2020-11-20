@@ -3,5 +3,6 @@
     "l-search-bar": "/dist/search-bar/index"
     
   },
-  "navigationBarTitleText": "二 手 书 搜 搜"
+  "navigationBarTitleText": "二 手 书 搜 搜",
+  "navigationStyle": "custom"
 }

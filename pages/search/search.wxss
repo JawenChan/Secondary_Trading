@@ -1,5 +1,82 @@
 /* pages/search/search.wxss */
+page{
+  background-image: url("https://7765-weiji-r9iia-1302671935.tcb.qcloud.la/%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90/%E6%90%9C%E7%B4%A2%E9%A1%B5%E9%9D%A2/%E8%83%8C%E6%99%AF%E5%9B%BE.jpg?sign=1ae4df7c5a44d54fc8dbd89c910d3a4b&t=1604318636");
+}
 .search{
-  /* position: relative; */
-  top: 100rpx;
+  position: absolute;
+  top: 75rpx;
+  left: 100rpx;
+  width: 400rpx;
+  
+}
+.picker{
+  position: absolute;
+  top: 95rpx;
+  left: 50rpx;
+  text-align: center;
+  color: red;
+  font-size: 20rpx;
+  background-color: seagreen;
+}
+
+.n{
+  height: 750rpx;
+  background-color: beige;
+  position: relative;
+}
+
+.swiper{
+  height: 300rpx;
+  width: 670rpx;
+  background-color: rgb(68, 248, 188);
+  position: absolute;
+  left:40rpx;
+  top: 300rpx;
+}
+.head{
+  width: 750rpx;
+  height: 475rpx;
+  background-color: cornsilk;
+}
+
+.image1{
+  height: 250rpx;
+  width: 670rpx;
+  background-color: cadetblue;
+  position: absolute;
+  left:40rpx;
+  top: 650rpx;
+}
+
+.image2{
+  height: 250rpx;
+  width: 670rpx;
+  background-color: cadetblue;
+  position: absolute;
+  left:40rpx;
+  top: 950rpx;
+}
+.Appname{
+  width: 670rpx;
+  height: 110rpx;
+  background-color: seashell;
+  position: absolute;
+  top: 200rpx;
+  left: 40rpx;
+}
+.name{
+  position: relative;
+  left: 8rpx;
+  width: 230rpx;
+  height: 100rpx;
+  background-color: silver;
+  font-size: 80rpx;
+}
+.tatoo{
+  position: relative;
+ left: 10rpx;
+  width: 230rpx;
+  height: 100rpx;
+  background-color: rgb(186, 245, 163);
+  font-size: 40rpx;
 }
