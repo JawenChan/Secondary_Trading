@@ -1,6 +1,6 @@
 <!--搜索窗口-->
-<image class="head" src="https://7765-weiji-r9iia-1302671935.tcb.qcloud.la/search-pages/background/shujia_shuji-008.jpg?sign=6884b131393be77c70ecbbc02d34f863&t=1605196412"></image>
-<swiper class="swiper" circular="true" >
+<image class="head" src="cloud://weiji-r9iia.7765-weiji-r9iia-1302671935/search-pages/background/背景图.jpg"></image>
+<swiper class="swiper" gcircular="true" >
   <block wx:for="{{array}}">
     <swiper-item>
      <image src="{{item.src}}"></image>
@@ -18,8 +18,8 @@
   <image> </image>
 </view>
 
-<view class="image2">
-  <image> </image>
+<view >
+  <image src="cloud://weiji-r9iia.7765-weiji-r9iia-1302671935/search-pages/image/image2.jpg" class="image2"> </image>
 </view>
 
 <view class="Appname">
