@@ -5,18 +5,18 @@ page{
 .search{
   position: absolute;
   top: 75rpx;
-  left: 100rpx;
+  left: 120rpx;
   width: 400rpx;
   
 }
 .picker{
   position: absolute;
-  top: 95rpx;
-  left: 50rpx;
-  text-align: center;
-  color: red;
+  width: max-content;
+  top: 48rpx;
+  left: 15rpx;
+  color: rgb(250, 250, 250);
   font-size: 20rpx;
-  background-color: seagreen;
+  font-weight: bold;
 }
 
 .n{
@@ -33,6 +33,12 @@ page{
   left:40rpx;
   top: 300rpx;
 }
+
+.imagea{
+  height: 300rpx;
+  width: 670rpx;
+}
+
 .head{
   width: 750rpx;
   height: 475rpx;
@@ -59,7 +65,7 @@ page{
 .Appname{
   width: 670rpx;
   height: 110rpx;
-  background-color: seashell;
+  
   position: absolute;
   top: 200rpx;
   left: 40rpx;
@@ -69,14 +75,19 @@ page{
   left: 8rpx;
   width: 230rpx;
   height: 100rpx;
-  background-color: silver;
-  font-size: 80rpx;
+  top:25rpx;
+  font-size: 50rpx;
+  color: rgb(254, 255, 255);
+  font-weight: bold;
+  font-family: 楷体；
 }
 .tatoo{
   position: relative;
  left: 10rpx;
   width: 230rpx;
   height: 100rpx;
-  background-color: rgb(186, 245, 163);
-  font-size: 40rpx;
+  top: 25rpx;
+  font-size: 30rpx;
+  color: rgb(255, 255, 255);
+  font-family: 隶书;
 }
