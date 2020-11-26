@@ -22,8 +22,9 @@ autoplay="true" interval="3000" >
 </view>
 
 <view>
-  <l-search-bar class="search" show-cancel="{{false}}" placeholder="书名/作者/ISBN" bind:linconfirm="search"
-    shape="circle" />
+  <l-search-bar class="search"  placeholder="书名/作者/ISBN" bind:linconfirm="search"
+    shape="circle" 
+     />
 </view>
 
 <view>
@@ -38,3 +39,4 @@ autoplay="true" interval="3000" >
   <text class="name">学长,有书吗？</text>
   <text class="tatoo">循环，让生活更美好</text>
 </view>
+

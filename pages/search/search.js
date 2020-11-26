@@ -1,6 +1,7 @@
 // pages/search/search.js
-Page({
 
+Page({
+    
   /**
    * 页面的初始数据
    */
@@ -49,7 +50,8 @@ bindMultiPickerColumnChange: function (e) {
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var anum = wx.getMenuButtonBoundingClientRect().top
+console.log(anum)
   },
 
   /**
