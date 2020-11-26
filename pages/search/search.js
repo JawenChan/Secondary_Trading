@@ -1,11 +1,12 @@
 // pages/search/search.js
-
+var a= 0
 Page({
-    
+     
   /**
    * 页面的初始数据
    */
   data: {
+    
    array:[
      {url:"cloud://weiji-r9iia.7765-weiji-r9iia-1302671935/search-pages/swiper/swiper1.jpg" },
      {url:"cloud://weiji-r9iia.7765-weiji-r9iia-1302671935/search-pages/swiper/swiper2.jpg" },
@@ -13,6 +14,7 @@ Page({
    ],
    multiArray: [['省份', '广东'], ['选择高校'],],
    multiIndex: [0, 0],
+  
   },
 
   bindMultiPickerChange: function (e) {
@@ -50,8 +52,11 @@ bindMultiPickerColumnChange: function (e) {
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var anum = wx.getMenuButtonBoundingClientRect().top
-console.log(anum)
+    a = wx.getMenuButtonBoundingClientRect().top
+    this.setData({
+      a:a
+    })
+
   },
 
   /**

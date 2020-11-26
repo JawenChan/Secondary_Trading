@@ -3,8 +3,7 @@
 <image class="head" src="cloud://weiji-r9iia.7765-weiji-r9iia-1302671935/search-pages/background/背景图.jpg"></image>
 
 
-<swiper class="swiper" circular="true" indicator-dots="true"
-autoplay="true" interval="3000" >
+<swiper class="swiper" circular="true" indicator-dots="true" autoplay="true" interval="3000">
   <block wx:for="{{array}}" wx:key="*this">
     <swiper-item>
       <image class="imagea" src="{{item.url}}"></image>
@@ -13,18 +12,17 @@ autoplay="true" interval="3000" >
 </swiper>
 
 
-<view class="picker" >
-  <picker mode="multiSelector" bindchange="bindMultiPickerChange" 
-              bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
-            <view class="picker">{{multiArray[1][multiIndex[1]]}}  
-            </view>
-         </picker>
+<view class="picker">
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange"
+    value="{{multiIndex}}" range="{{multiArray}}">
+    <view class="picker">{{multiArray[1][multiIndex[1]]}}
+    </view>
+  </picker>
 </view>
 
 <view>
-  <l-search-bar class="search"  placeholder="书名/作者/ISBN" bind:linconfirm="search"
-    shape="circle" 
-     />
+  <l-search-bar class="search" placeholder="书名/作者/ISBN" bind:linconfirm="search" shape="primary" show-cancel="{{false}}"
+    style="top:{{a}}px" />
 </view>
 
 <view>
