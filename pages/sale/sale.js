@@ -1,4 +1,6 @@
 // pages/sale/sale.js
+const db = wx.cloud.database()
+const productsCollection = db.collection('products')
 Page({
 
   /**
@@ -51,42 +53,60 @@ Page({
     this.setData({
       New_O:e.detail.value
     })
-    console.log("Autor",e.detail)
   },
   //选择图片
   addPictures(e){
+    const that=this
     console.log("点击了上传",e.detail)
       for(let i in e.detail.current){
 
         var picList=[{
           path:e.detail.current[i].url,
-          name:'',
+          name:'1111',
           time:''
         }]
 
-        this.data.picLists = this.data.picLists.concat(picList)
-        this.setData({ 
+        that.data.picLists = this.data.picLists.concat(picList)
+        that.setData({ 
           'picLists':this.data.picLists
         });
-        console.log("点击了",this.data)
+        console.log("点击了",that.data)
       }
   },
    
       //上传图片内存
       upload(e){
+        const that=this
         for(var index in this.data.picLists)
       wx.cloud.uploadFile({
         cloudPath:new Date().getTime()+ '.png', // 上传至云端的路径
-        filePath: this.data.picLists[index].path, // 小程序临时文件路径
+        filePath: that.data.picLists[index].path, // 小程序临时文件路径
         success: res => {
           // 返回文件 ID
           console.log("上传成功",res.fileID)
-          this.setData({
+          that.setData({
             imgUrl:res.fileID
-          })
+          })         
         },
         fail: console.error
-      })
+      }).then(productsCollection.add({
+        data:{
+          userInfo:this.userInfo,
+          picLists:this.data.picLists,
+          BookName:this.data.BookName,
+          Autor:this.data.Autor,
+          ISBN:this.data.ISBN,
+          Class:this.data.Class,
+          Price:this.data.Price,
+          New_O:this.data.New_O
+        },
+        success:res=>{
+          console.log(res)
+        }
+      }),
+      then(res=>{
+        console.log(res)
+      }))
       },
 
   /**

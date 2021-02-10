@@ -7,7 +7,28 @@ Page({
     motto: 'Hello WEIJI',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    userInfo:{},
+    openid:""
+  },
+  onGotUserInfo:function(e){
+    const that=this
+    wx.cloud.callFunction({
+      name:"login",
+      success:res=>{
+        console.log("云函数部署成功")
+        that.setData({
+          openid:res.result.openid,
+          userInfo:e.detail.userInfo
+        })
+        that.data.userInfo.openid=that.data.openid
+        console.log("userinfo",that.data.userInfo)
+        wx.getStorageSync("ueserinfo",that.data.userInfo)
+      },
+      fail:res=>{
+        console.log("云函数调用失败")
+      }
+    })
   },
   //事件处理函数
   bindViewTap: function() {
@@ -16,6 +37,12 @@ Page({
     })
   },
   onLoad: function () {
+    const ui=wx.getStorageSync('userinfo')
+    this.setData({
+      userInfo:ui,
+      openid:ui.openid
+    })
+    
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
