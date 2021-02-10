@@ -48,21 +48,6 @@
   "simulatorPluginLibVersion": {},
   "condition": {
     "search": {
-      "list": []
-    },
-    "conversation": {
-      "list": []
-    },
-    "plugin": {
-      "list": []
-    },
-    "game": {
-      "list": []
-    },
-    "gamePlugin": {
-      "list": []
-    },
-    "miniprogram": {
       "list": [
         {
           "id": -1,

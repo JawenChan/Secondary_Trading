@@ -1,28 +1,40 @@
 <!--搜索窗口-->
-<image class="head" src="https://7765-weiji-r9iia-1302671935.tcb.qcloud.la/search-pages/background/shujia_shuji-008.jpg?sign=6884b131393be77c70ecbbc02d34f863&t=1605196412"></image>
-<swiper class="swiper" circular="true" >
-  <block wx:for="{{array}}">
+
+<image class="head" src="cloud://weiji-r9iia.7765-weiji-r9iia-1302671935/search-pages/background/背景图.jpg"></image>
+
+
+<swiper class="swiper" circular="true" indicator-dots="true" autoplay="true" interval="3000">
+  <block wx:for="{{array}}" wx:key="*this">
     <swiper-item>
-     <image src="{{item.src}}"></image>
+      <image class="imagea" src="{{item.url}}"></image>
     </swiper-item>
   </block>
-
-
 </swiper>
+
+
+<view class="picker">
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange"
+    value="{{multiIndex}}" range="{{multiArray}}">
+    <view class="picker">{{multiArray[1][multiIndex[1]]}}
+    </view>
+  </picker>
+</view>
+
 <view>
-  <l-search-bar class="search" show-cancel="{{false}}" placeholder="书名/作者/ISBN" bind:linconfirm="search"  shape="circle" />
-</view>
-<picker class="picker" mode="selector">校 区</picker>
-
-<view class="image1">
-  <image> </image>
+  <l-search-bar class="search" placeholder="书名/作者/ISBN" bind:linconfirm="search" shape="primary" show-cancel="{{false}}"
+    style="top:{{a}}px" />
 </view>
 
-<view class="image2">
-  <image> </image>
+<view>
+  <image src="cloud://weiji-r9iia.7765-weiji-r9iia-1302671935/search-pages/image/image1.jpg" class="image1"> </image>
+</view>
+
+<view>
+  <image src="cloud://weiji-r9iia.7765-weiji-r9iia-1302671935/search-pages/image/image2.jpg" class="image2"> </image>
 </view>
 
 <view class="Appname">
-  <text class="name">555</text>
-  <text class="tatoo">因为热爱</text>
+  <text class="name">学长,有书吗？</text>
+  <text class="tatoo">循环，让生活更美好</text>
 </view>
+

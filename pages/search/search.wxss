@@ -4,19 +4,20 @@ page{
 }
 .search{
   position: absolute;
-  top: 75rpx;
-  left: 100rpx;
-  width: 400rpx;
+  top: 48px;
+  left: 10rpx;
+  width: 350rpx;
+  
   
 }
 .picker{
   position: absolute;
-  top: 95rpx;
-  left: 50rpx;
-  text-align: center;
-  color: red;
-  font-size: 20rpx;
-  background-color: seagreen;
+  width: max-content;
+  top: 80rpx;
+  left: 15rpx;
+  color: rgb(232, 241, 250);
+  font-size: 30rpx;
+  
 }
 
 .n{
@@ -31,8 +32,14 @@ page{
   background-color: rgb(68, 248, 188);
   position: absolute;
   left:40rpx;
-  top: 300rpx;
+  top: 350rpx;
 }
+
+.imagea{
+  height: 300rpx;
+  width: 670rpx;
+}
+
 .head{
   width: 750rpx;
   height: 475rpx;
@@ -45,7 +52,7 @@ page{
   background-color: cadetblue;
   position: absolute;
   left:40rpx;
-  top: 650rpx;
+  top: 680rpx;
 }
 
 .image2{
@@ -54,14 +61,14 @@ page{
   background-color: cadetblue;
   position: absolute;
   left:40rpx;
-  top: 950rpx;
+  top: 980rpx;
 }
 .Appname{
   width: 670rpx;
   height: 110rpx;
-  background-color: seashell;
+  
   position: absolute;
-  top: 200rpx;
+  top: 250rpx;
   left: 40rpx;
 }
 .name{
@@ -69,14 +76,19 @@ page{
   left: 8rpx;
   width: 230rpx;
   height: 100rpx;
-  background-color: silver;
-  font-size: 80rpx;
+  top:25rpx;
+  font-size: 50rpx;
+  color: rgb(254, 255, 255);
+  font-weight: bold;
+  font-family: 楷体；
 }
 .tatoo{
   position: relative;
  left: 10rpx;
   width: 230rpx;
   height: 100rpx;
-  background-color: rgb(186, 245, 163);
-  font-size: 40rpx;
+  top: 25rpx;
+  font-size: 30rpx;
+  color: rgb(255, 255, 255);
+  font-family: 隶书;
 }
