@@ -43,7 +43,7 @@ page{
 .head{
   width: 750rpx;
   height: 475rpx;
-  background-color: cornsilk;
+  background-color: rgb(182, 177, 167);
 }
 
 .image1{

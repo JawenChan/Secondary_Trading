@@ -19,22 +19,32 @@
     </view>
   </picker>
 </view>
-
+//sousuo
 <view>
   <l-search-bar class="search" placeholder="书名/作者/ISBN" bind:linconfirm="search" shape="primary" show-cancel="{{false}}"
     style="top:{{a}}px" />
 </view>
 
-<view>
+<!-- <view>
   <image src="cloud://weiji-r9iia.7765-weiji-r9iia-1302671935/search-pages/image/image1.jpg" class="image1"> </image>
 </view>
 
 <view>
   <image src="cloud://weiji-r9iia.7765-weiji-r9iia-1302671935/search-pages/image/image2.jpg" class="image2"> </image>
-</view>
+</view> -->
 
 <view class="Appname">
   <text class="name">学长,有书吗？</text>
   <text class="tatoo">循环，让生活更美好</text>
 </view>
 
+<view></view>
+<view wx:for="{{SearchData}}">
+    <!--index为每个数据对应的下标-->
+    <view >序号：{{index+1}}</view>
+    <!--item就相当于数组名+下标的结合体，适用于调用数组所有数据-->
+    <view>{{item.name}}</view>
+    <view>
+      <image src="{{item.picLists[0].path}}"></image>
+    </view>
+</view>

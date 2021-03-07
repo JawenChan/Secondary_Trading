@@ -3,6 +3,7 @@
   "packOptions": {
     "ignore": []
   },
+  "cloudfunctionRoot":"cloudfunctions/",
   "setting": {
     "urlCheck": true,
     "es6": true,
@@ -21,7 +22,7 @@
     "checkSiteMap": true,
     "uploadWithSourceMap": true,
     "compileHotReLoad": false,
-    "useMultiFrameRuntime": false,
+    "useMultiFrameRuntime": true,
     "useApiHook": true,
     "babelSetting": {
       "ignore": [],
@@ -31,9 +32,12 @@
     "useIsolateContext": true,
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
-    "minifyWXSS": true
+    "minifyWXSS": true,
+    "bundle": false,
+    "useApiHostProcess": true
   },
   "compileType": "miniprogram",
   "libVersion": "2.13.1",
@@ -47,12 +51,21 @@
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
-    "search": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
       "list": [
         {
-          "id": -1,
-          "name": "pages/sale/sale",
-          "pathName": "pages/sale/sale",
+          "name": "pages/search/search",
+          "pathName": "pages/search/search",
+          "query": "",
           "scene": null
         }
       ]

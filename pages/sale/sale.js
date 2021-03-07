@@ -104,6 +104,15 @@ Page({
           console.log(res)
         }
       }),
+      this.setData({
+        BookName:"",
+        Autor:"",
+        ISBN:"",
+        Class:"",
+        Price:"",
+        New_O:"",
+        picList:[]
+      }),
       then(res=>{
         console.log(res)
       }))

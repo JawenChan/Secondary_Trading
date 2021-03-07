@@ -1,11 +1,12 @@
 // pages/search/search.js
+const db = wx.cloud.database()
 Page({
      
   /**
    * 页面的初始数据
    */
   data: {
-    
+    SearchData:[],
    array:[
      {url:"cloud://weiji-r9iia.7765-weiji-r9iia-1302671935/search-pages/swiper/swiper1.jpg" },
      {url:"cloud://weiji-r9iia.7765-weiji-r9iia-1302671935/search-pages/swiper/swiper2.jpg" },
@@ -13,7 +14,7 @@ Page({
    ],
    multiArray: [['省份', '广东'], ['选择高校'],],
    multiIndex: [0, 0],
-  
+   getname:"sad"
   },
 
   bindMultiPickerChange: function (e) {
@@ -46,16 +47,37 @@ bindMultiPickerColumnChange: function (e) {
     }
     );
 },
-
+//获取书的信息SearchgetBooks
+  search:function(){
+    wx.cloud.callFunction({
+      name:'getBooksData',
+      data:{
+        getname:this.data.getname
+      },
+      success:res=>{
+        // this.setData({
+        //   SearchData:res.result.data
+        // })
+        console.log(this.getname),
+        console.log(res.result.data)
+      },
+      fail:err=>{
+        console.log(err),
+        wx.showToast({
+          title: '数据不存在',
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    a = wx.getMenuButtonBoundingClientRect().top
+    const a = wx.getMenuButtonBoundingClientRect().top
     this.setData({
       a:a
-    })
-
+    }),
+    console.log(a)
   },
 
   /**
