@@ -8,13 +8,13 @@ Page({
   data: {
     SearchData:[],
    array:[
-     {url:"cloud://weiji-r9iia.7765-weiji-r9iia-1302671935/search-pages/swiper/swiper1.jpg" },
+     {url:"cloud://weiji-r9iia.7765-weiji-r9iia-01302671935/search-pages/swiper/swiper1.jpg" },
      {url:"cloud://weiji-r9iia.7765-weiji-r9iia-1302671935/search-pages/swiper/swiper2.jpg" },
      {url:"cloud://weiji-r9iia.7765-weiji-r9iia-1302671935/search-pages/swiper/swiper3.jpg" },
    ],
-   multiArray: [['省份', '广东'], ['选择高校'],],
+   multiArray: [['省份', '广东'], ['选择高校']],
    multiIndex: [0, 0],
-   getname:"sad"
+  //  getname:"1"
   },
 
   bindMultiPickerChange: function (e) {
@@ -48,26 +48,39 @@ bindMultiPickerColumnChange: function (e) {
     );
 },
 //获取书的信息SearchgetBooks
-  search:function(){
-    wx.cloud.callFunction({
-      name:'getBooksData',
-      data:{
-        getname:this.data.getname
-      },
-      success:res=>{
-        // this.setData({
-        //   SearchData:res.result.data
-        // })
-        console.log(this.getname),
-        console.log(res.result.data)
-      },
-      fail:err=>{
-        console.log(err),
+  search:function(e){
+    // wx.cloud.callFunction({
+    //   name:'getBooksData',
+    //   data:{
+    //     BookName:"123"
+    //   },
+    //   success:res=>{
+    //     console.log("请求成功",res)
+    //   },
+    //   fail:err=>{
+    //     console.log("请求失败",err),
+    //     wx.showToast({
+    //       title: '数据不存在',
+    //     })
+    //   }
+    // })
+    var BookName;
+  db.collection('products').where({
+    BookName:e.detail.value   
+  }).get().then(
+    res=>{
+      if (res.data.length>0) {
+        console.log("请求成功")
+        console.log(e.detail.value)
+        console.log(res.data[0])
+      }else{
+        console.log(e.detail.value)
+        console.log("请求数据不存在",res),
         wx.showToast({
           title: '数据不存在',
         })
       }
-    })
+  });
   },
   /**
    * 生命周期函数--监听页面加载

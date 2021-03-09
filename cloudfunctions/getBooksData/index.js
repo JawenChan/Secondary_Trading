@@ -2,15 +2,22 @@
 const cloud = require('wx-server-sdk')
 
 cloud.init()
-
+const db=cloud.database()
 // 云函数入口函数
 exports.main = async (event, context) => {
-  const wxContext = cloud.getWXContext()
-  const db=cloud.database;
-
-  let SearchData=await db.collection('products').wehre({
-      BookName:event.getname
-  }).get();
-  SearchData=SearchData.data[1].value
-  return SearchData
+  db.collection('products').where({
+      BookName:"sad"
+  }).get({
+    // success:res=>{
+    //   console.log(res.data)
+    //   return res 
+    // },
+    // fail(res){
+    //   console.log("none")
+    //   return err
+    // }
+  }).then(res=>{
+    console.log(res.data)
+    return res
+  });
 }

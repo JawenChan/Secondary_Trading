@@ -21,7 +21,7 @@
 </view>
 //sousuo
 <view>
-  <l-search-bar class="search" placeholder="书名/作者/ISBN" bind:linconfirm="search" shape="primary" show-cancel="{{false}}"
+  <l-search-bar class="search" value="{{SearchingData}}" placeholder="书名/作者/ISBN" bind:linconfirm="search" shape="primary" show-cancel="{{false}}"
     style="top:{{a}}px" />
 </view>
 
