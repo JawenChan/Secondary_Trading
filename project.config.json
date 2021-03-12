@@ -3,7 +3,7 @@
   "packOptions": {
     "ignore": []
   },
-  "cloudfunctionRoot":"cloudfunctions/",
+  "cloudfunctionRoot": "cloudfunctions/",
   "setting": {
     "urlCheck": true,
     "es6": true,
@@ -29,14 +29,14 @@
       "disablePlugins": [],
       "outputPath": ""
     },
+    "bundle": false,
     "useIsolateContext": true,
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
-    "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
+    "userConfirmedBundleSwitch": false,
     "minifyWXSS": true,
-    "bundle": false,
     "useApiHostProcess": true
   },
   "compileType": "miniprogram",

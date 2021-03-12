@@ -73,6 +73,16 @@ bindMultiPickerColumnChange: function (e) {
         console.log("请求成功")
         console.log(e.detail.value)
         console.log(res.data[0])
+        console.log(res.data[2]),
+
+        wx.showToast({
+          title: '数据存在',
+        })
+        //跳转页面
+        wx.navigateTo({
+          url: "pages/searchresult/searchresult",
+        })
+
       }else{
         console.log(e.detail.value)
         console.log("请求数据不存在",res),

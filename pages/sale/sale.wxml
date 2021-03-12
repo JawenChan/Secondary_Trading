@@ -7,7 +7,7 @@
 	<l-input label="价格" value="{{Price}}" type="number" required="{{true}}" bind:linblur="PriceInput" placeholder="请输入出售价格" />
 	<l-input label="几成新" value="{{New_O}}" type="" required="{{true}}" bind:linblur="New_OInput" placeholder="请输入该书新旧程度" />
 	
-	<!-- <l-button type="default" bindtap="addPicture">添加图片</l-button> -->
+	
 	<l-image-picker size="4" count="4" bind:linchange="addPictures" size-type="compressed" />
 	<view>
 		<l-button bindtap="upload" type="success" size="mini" bind:getuserinfo="getUserInfo" >确认提交</l-button>
