@@ -1,51 +1,54 @@
 {
-  "pages":[
+  "pages": [
     "pages/search/search",
     "pages/my/my",
     "pages/sale/sale",
     "pages/chat/chat",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/searchresult/searchresult"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#000000",
     "selectedColor": "#ff2a4d",
     "backgroundColor": "#F5F5F5",
     "borderStyle": "white",
-    "list": [{
-      "pagePath": "pages/search/search",
-      "text": "搜 索",
-      "iconPath": "/icon/搜索未选择.png",
-      "selectedIconPath": "/icon/搜索已选择.png"
-    },
-    {
-      "pagePath": "pages/sale/sale",
-      "text": "发 布",
-      "iconPath": "/icon/发布未选择.png",
-      "selectedIconPath": "/icon/发布已选择.png"
-    },
-    {
-      "pagePath": "pages/chat/chat",
-      "text": "聊 天",
-      "iconPath": "/icon/聊天未选择.png",
-      "selectedIconPath": "/icon/聊天已选择.png"
-    },
-    {
-      "pagePath": "pages/my/my",
-      "text": "我 的",
-      "iconPath": "/icon/我的未选择.png",
-      "selectedIconPath": "/icon/我的已选择.png"
-    }]
+    "list": [
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜 索",
+        "iconPath": "/icon/搜索未选择.png",
+        "selectedIconPath": "/icon/搜索已选择.png"
+      },
+      {
+        "pagePath": "pages/sale/sale",
+        "text": "发 布",
+        "iconPath": "/icon/发布未选择.png",
+        "selectedIconPath": "/icon/发布已选择.png"
+      },
+      {
+        "pagePath": "pages/chat/chat",
+        "text": "聊 天",
+        "iconPath": "/icon/聊天未选择.png",
+        "selectedIconPath": "/icon/聊天已选择.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我 的",
+        "iconPath": "/icon/我的未选择.png",
+        "selectedIconPath": "/icon/我的已选择.png"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
-      "van-button": "dist/button/index",
-      "van-input": "dist/input/index"
+    "van-button": "dist/button/index",
+    "van-input": "dist/input/index"
   }
 }

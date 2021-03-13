@@ -1,5 +1,6 @@
 // pages/search/search.js
-const db = wx.cloud.database()
+const db = wx.cloud.database();
+var BookName;
 Page({
      
   /**
@@ -17,13 +18,14 @@ Page({
    getPicture:[]
   },
 
+  //高校选择器
   bindMultiPickerChange: function (e) {
     //console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
         multiIndex: e.detail.value
     })
 },
-bindMultiPickerColumnChange: function (e) {
+  bindMultiPickerColumnChange: function (e) {
     //console.log('修改的列为', e.detail.column, '，值为', e.detail.value);
     var multiArray = this.data.multiArray,
         multiIndex = this.data.multiIndex
@@ -64,7 +66,7 @@ bindMultiPickerColumnChange: function (e) {
     //     })
     //   }
     // })
-    var BookName;
+    
   db.collection('products').where({
     BookName:e.detail.value   
   }).get().then(
@@ -75,7 +77,19 @@ bindMultiPickerColumnChange: function (e) {
         console.log(e.detail.value)
         //显示具体
         console.log(res.data[0])
-        console.log(res.data[1])
+        console.log(res.data[2]),
+
+     /*   wx.showToast({
+          title: '数据存在',
+        }),*/
+
+        //跳转页面
+        wx.navigateTo({
+          url: "../searchresult/searchresult?BookName="+BookName,
+        })
+        console.log(BookName);
+        
+
       }else{
         console.log(e.detail.value)
         console.log("请求数据不存在",res),
@@ -89,6 +103,7 @@ bindMultiPickerColumnChange: function (e) {
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //搜索框对齐胶囊
     const a = wx.getMenuButtonBoundingClientRect().top
     this.setData({
       a:a
