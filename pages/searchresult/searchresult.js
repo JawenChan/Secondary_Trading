@@ -43,9 +43,8 @@ Page({
   onLoad: function (options) {
     var BookName;
     BookName=options.BookName
-    console.log(BookName);
     this.setData({
-      SearchData:BookName
+      BookName:BookName
     })
     
 

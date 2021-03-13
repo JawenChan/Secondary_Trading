@@ -86,9 +86,10 @@ Page({
 
         //跳转页面
         wx.navigateTo({
-          url: "../searchresult/searchresult?BookName="+e.detail.value+"   "+res.data[0].BookName,
+          url: "../searchresult/searchresult?BookName="+e.detail.value
+          //+"   "+res.data[0].BookName,
         })
-        console.log(BookName);
+        console.log(e.detail.value);
         
 
       }else{
