@@ -2,7 +2,9 @@
 <view>
 	<l-input label="书名" type="" value="{{BookName}}" required="{{true}}" bind:linblur="NameInput" placeholder="请输入书名" />
 	<l-input label="作者" value="{{Autor}}" type="" required="{{true}}" bind:linblur="AutorInput" placeholder="请输入书作者" />
-	<l-input label="isbn" value="{{ISBN}}" type="" required="{{true}}" bind:linblur="IsbnInput" placeholder="请输入数字" />
+	<l-input label="isbn" value="{{ISBN}}" type="number" required="{{true}}" bind:linblur="IsbnInput" placeholder="请输入数字" />
+	<image class="scan" bindtap="scanCode" style="width:40rpx;height:40rpx;" src="/扫描.png"></image>
+	<text bindtap="scanCode">扫描二维码</text>
 	<l-input label="课程" value="{{Class}}" type="" required="{{true}}" bind:linblur="ClassInput" placeholder="请输入课程" />
 	<l-input label="价格" value="{{Price}}" type="number" required="{{true}}" bind:linblur="PriceInput" placeholder="请输入出售价格" />
 	<l-input label="几成新" value="{{New_O}}" type="" required="{{true}}" bind:linblur="New_OInput" placeholder="请输入该书新旧程度" />

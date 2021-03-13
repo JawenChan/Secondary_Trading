@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "l-search-bar": "/dist/search-bar/index"
+  },
+  "navigationBarTitleText": "搜索结果",
+  "navigationStyle": "default"
 }

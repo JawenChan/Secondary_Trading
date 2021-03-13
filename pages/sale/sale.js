@@ -15,6 +15,24 @@ Page({
       Class:'',
       Price:'',
       New_O:''
+      
+  },
+
+  //扫面二维码
+  scanCode: function() {
+    var that = this;
+    wx.scanCode({ //扫描API
+      success(res) { //扫描成功
+        console.log(res) //输出回调信息
+        that.setData({
+          ISBN: res.result
+        });
+        wx.showToast({
+          title: '成功',
+          duration: 1000
+        })
+      }
+    })
   },
 
   //输入书名

@@ -1,17 +1,53 @@
 // pages/searchresult/searchresult.js
+const db = wx.cloud.database()
 Page({
 
   /**
    * 页面的初始数据
    */
+  
   data: {
-
+    SearchData:[],
+    BookName:''
   },
 
+
+  search:function(e){
+    var BookName;
+  db.collection('products').where({
+    BookName:e.detail.value   
+  }).get().then(
+    res=>{
+      if (res.data.length>0) {
+        console.log("请求成功")
+        console.log(e.detail.value)
+        console.log(res.data[0])
+        console.log(res.data[2])
+
+     /*   wx.showToast({
+          title: '数据存在',
+        }),*/
+
+      }else{
+        console.log(e.detail.value)
+        console.log("请求数据不存在",res),
+        wx.showToast({
+          title: '数据不存在',
+        })
+      }
+  });
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var BookName;
+    BookName=options.BookName
+    console.log(BookName);
+    this.setData({
+      SearchData:BookName
+    })
+    
 
   },
 

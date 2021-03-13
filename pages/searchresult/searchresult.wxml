@@ -1,2 +1,6 @@
 <!--pages/searchresult/searchresult.wxml-->
-<text>pages/searchresult/searchresult.wxml</text>
+
+<!--搜索框-->
+<view>
+  <l-search-bar value="{{SearchingData}}"  placeholder="书名/作者/ISBN" bind:linconfirm="search" shape="primary" show-cancel="{{false}}"/>
+</view>
