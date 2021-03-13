@@ -7,14 +7,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    picLists:[ 
-      ],
-      BookName:'',
-      Autor:'',
-      ISBN:'',
-      Class:'',
-      Price:'',
-      New_O:''
+    picLists:[],
+    BookName:'',
+    Autor:'',
+    ISBN:'',
+    Class:'',
+    Price:'',
+    New_O:''
   },
 
   //输入书名

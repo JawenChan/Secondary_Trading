@@ -14,7 +14,7 @@ Page({
    ],
    multiArray: [['省份', '广东'], ['选择高校']],
    multiIndex: [0, 0],
-  //  getname:"1"
+   getPicture:[]
   },
 
   bindMultiPickerChange: function (e) {
@@ -71,8 +71,11 @@ bindMultiPickerColumnChange: function (e) {
     res=>{
       if (res.data.length>0) {
         console.log("请求成功")
+        //显示名字
         console.log(e.detail.value)
+        //显示具体
         console.log(res.data[0])
+        console.log(res.data[1])
       }else{
         console.log(e.detail.value)
         console.log("请求数据不存在",res),
