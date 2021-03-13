@@ -1,6 +1,5 @@
 // pages/search/search.js
 const db = wx.cloud.database();
-var BookName;
 Page({
      
   /**
@@ -66,7 +65,7 @@ Page({
     //     })
     //   }
     // })
-    
+  var BookName1;
   db.collection('products').where({
     BookName:e.detail.value   
   }).get().then(
@@ -78,14 +77,16 @@ Page({
         //显示具体
         console.log(res.data[0])
         console.log(res.data[2]),
-
+        this.setData({
+          BookName1:e.detail.value
+        })
      /*   wx.showToast({
           title: '数据存在',
         }),*/
 
         //跳转页面
         wx.navigateTo({
-          url: "../searchresult/searchresult?BookName="+BookName,
+          url: "../searchresult/searchresult?BookName="+e.detail.value+"   "+res.data[0].BookName,
         })
         console.log(BookName);
         
