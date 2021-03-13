@@ -8,12 +8,14 @@ Page({
   
   data: {
     SearchData:[],
-    BookName:''
+    BookName:'',
+    //Searchresult:[]
+
   },
 
 
   search:function(e){
-    var BookName;
+    var BookName,Searchresult;
   db.collection('products').where({
     BookName:e.detail.value   
   }).get().then(
@@ -23,7 +25,19 @@ Page({
         console.log(e.detail.value)
         console.log(res.data[0])
         console.log(res.data[2])
+        this.setData({
+          SearchData:res.data
+        })
+        
+        
 
+
+
+      /*  var i
+        for(i==0;i<=20;i++){
+        Searchresult[i]=res.data[i];
+        
+        }console.log(res.data[0]);*/
      /*   wx.showToast({
           title: '数据存在',
         }),*/
@@ -36,7 +50,9 @@ Page({
         })
       }
   });
-  },
+ 
+  
+},
   /**
    * 生命周期函数--监听页面加载
    */

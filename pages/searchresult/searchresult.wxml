@@ -4,3 +4,25 @@
 <view>
   <l-search-bar value="{{BookName}}"  placeholder="书名/作者/ISBN" bind:linconfirm="search" shape="primary" show-cancel="{{false}}"/>
 </view>
+
+<!--详情页-->
+<view wx:for="{{SearchData}}" wx:key="{{index}}">
+<!--<image src='cloud://weiji-r9iia.7765-weiji-r9iia-1302671935/1606447980518.png'></image>-->
+<text>书名：{{item.BookName}}
+
+</text>
+<text>作者：{{item.Autor}}
+
+</text>
+<text>ISBN：{{item.ISBN}}
+
+</text>
+<text>价格：{{item.Price}}
+
+</text>
+<view>--------
+  
+</view>
+
+
+</view>
