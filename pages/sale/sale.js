@@ -79,16 +79,19 @@ Page({
       for(let i in e.detail.current){
 
         var picList=[{
+          // path:e.detail.current[i].url,
           path:e.detail.current[i].url,
           name:'1111',
           time:''
         }]
-
+        // this.picList.path=that.data.imgUrl
+        
         that.data.picLists = this.data.picLists.concat(picList)
         that.setData({ 
           'picLists':this.data.picLists
         });
-        console.log("点击了",that.data)
+        console.log(res);
+        // console.log("点击了",that.data)
       }
   },
    
@@ -104,13 +107,22 @@ Page({
           console.log("上传成功",res.fileID)
           that.setData({
             imgUrl:res.fileID
-          })         
+          })    
+          //修改值 
+          //设置fileID
+          var path='picLists['+index+'].path';
+          this.setData({
+            [path]:res.fileID
+          });
+            console.log("ok",this.data.picLists)
+            console.log(imgUrl)
         },
         fail: console.error
       }).then(productsCollection.add({
         data:{
           userInfo:this.userInfo,
           picLists:this.data.picLists,
+          // picLists:imgUrl,
           BookName:this.data.BookName,
           Autor:this.data.Autor,
           ISBN:this.data.ISBN,
@@ -120,6 +132,7 @@ Page({
         },
         success:res=>{
           console.log(res)
+          // console.log(this.picLists)
         }
       }),
       this.setData({
