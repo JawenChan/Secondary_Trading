@@ -86,8 +86,6 @@ Page({
         that.setData({ 
           'picLists':this.data.picLists
         });
-        // console.log(res);
-        // console.log(e)
       }
   },
    
@@ -114,11 +112,10 @@ Page({
               fail: console.error
             })
           }
-        then(productsCollection.add({
+          productsCollection.add({
           data:{
             userInfo:this.userInfo,
             picLists:this.data.picLists,
-            // picLists:imgUrl,
             BookName:this.data.BookName,
             Autor:this.data.Autor,
             ISBN:this.data.ISBN,
@@ -130,7 +127,7 @@ Page({
             console.log(res)
             console.log("111",this.data.picLists)
           }
-        }))
+        })
       this.setData({
         BookName:"",
         Autor:"",
@@ -142,6 +139,7 @@ Page({
       }),
       then(res=>{
         console.log(res)
+        console.log(picList)
       })
       },
 
