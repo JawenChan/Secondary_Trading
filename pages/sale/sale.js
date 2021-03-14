@@ -77,64 +77,60 @@ Page({
     const that=this
     console.log("点击了上传",e.detail)
       for(let i in e.detail.current){
-
         var picList=[{
-          // path:e.detail.current[i].url,
           path:e.detail.current[i].url,
           name:'1111',
           time:''
         }]
-        // this.picList.path=that.data.imgUrl
-        
         that.data.picLists = this.data.picLists.concat(picList)
         that.setData({ 
           'picLists':this.data.picLists
         });
-        console.log(res);
-        // console.log("点击了",that.data)
+        // console.log(res);
+        // console.log(e)
       }
   },
    
       //上传图片内存
       upload(e){
         const that=this
-        for(var index in this.data.picLists)
-      wx.cloud.uploadFile({
-        cloudPath:new Date().getTime()+ '.png', // 上传至云端的路径
-        filePath: that.data.picLists[index].path, // 小程序临时文件路径
-        success: res => {
-          // 返回文件 ID
-          console.log("上传成功",res.fileID)
-          that.setData({
-            imgUrl:res.fileID
-          })    
-          //修改值 
-          //设置fileID
-          var path='picLists['+index+'].path';
-          this.setData({
-            [path]:res.fileID
-          });
-            console.log("ok",this.data.picLists)
-            console.log(imgUrl)
-        },
-        fail: console.error
-      }).then(productsCollection.add({
-        data:{
-          userInfo:this.userInfo,
-          picLists:this.data.picLists,
-          // picLists:imgUrl,
-          BookName:this.data.BookName,
-          Autor:this.data.Autor,
-          ISBN:this.data.ISBN,
-          Class:this.data.Class,
-          Price:this.data.Price,
-          New_O:this.data.New_O
-        },
-        success:res=>{
-          console.log(res)
-          // console.log(this.picLists)
-        }
-      }),
+        //这里只循环到了一次，就是一共有两张图片，他只循环了一张
+        for(var index in this.data.picLists){
+            console.log(index)
+            wx.cloud.uploadFile({
+              cloudPath:new Date().getTime()+ '.png', // 上传至云端的路径
+              filePath: that.data.picLists[index].path, // 小程序临时文件路径
+              success: res => {
+                // 返回文件 ID
+                console.log("上传成功",res.fileID)
+                //修改值 
+                //设置fileID
+                var path='picLists['+index+'].path';
+                this.setData({
+                  [path]:res.fileID
+                });
+                  console.log("ok",this.data.picLists)
+              },
+              fail: console.error
+            })
+          }
+        then(productsCollection.add({
+          data:{
+            userInfo:this.userInfo,
+            picLists:this.data.picLists,
+            // picLists:imgUrl,
+            BookName:this.data.BookName,
+            Autor:this.data.Autor,
+            ISBN:this.data.ISBN,
+            Class:this.data.Class,
+            Price:this.data.Price,
+            New_O:this.data.New_O
+          },
+          success:res=>{
+            console.log(res)
+            console.log("111",this.data.picLists)
+          }
+        }))
       this.setData({
         BookName:"",
         Autor:"",
@@ -146,7 +142,7 @@ Page({
       }),
       then(res=>{
         console.log(res)
-      }))
+      })
       },
 
   /**
