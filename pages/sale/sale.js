@@ -103,10 +103,13 @@ Page({
                 console.log("上传成功",res.fileID)
                 //修改值 
                 //设置fileID
-                var path='picLists['+index+'].path';
+                var newpicLists=this.data.picLists
+                var newpath=newpicLists[index]['path'];
+                newpicLists[index]['path']=res.fileID;
                 this.setData({
-                  [path]:res.fileID
-                });
+                  newpicLists:newpath
+                  });
+
                   console.log("ok",this.data.picLists)
               },
               fail: console.error
@@ -114,33 +117,37 @@ Page({
           }
           productsCollection.add({
           data:{
-            userInfo:this.userInfo,
-            picLists:this.data.picLists,
-            BookName:this.data.BookName,
-            Autor:this.data.Autor,
-            ISBN:this.data.ISBN,
-            Class:this.data.Class,
-            Price:this.data.Price,
-            New_O:this.data.New_O
+            "userInfo":this.userInfo,
+            "picLists":this.data.picLists,
+            "BookName":this.data.BookName,
+            "Autor":this.data.Autor,
+            "ISBN":this.data.ISBN,
+            "Class":this.data.Class,
+            "Price":this.data.Price,
+            "New_O":this.data.New_O
           },
           success:res=>{
-            console.log(res)
-            console.log("111",this.data.picLists)
+            this.setData({
+              BookName:"",
+              Autor:"",
+              ISBN:"",
+              Class:"",
+              Price:"",
+              New_O:"",
+              picList:[]
+            })
+            // console.log(res)
+            // console.log("111",this.data.picLists[index].path)
+            // console.log("222",this.data.picLists[index])
+            // console.log("333",this.data.picLists[0])
+            console.log("444",this.data.picLists)
           }
         })
-      this.setData({
-        BookName:"",
-        Autor:"",
-        ISBN:"",
-        Class:"",
-        Price:"",
-        New_O:"",
-        picList:[]
-      }),
-      then(res=>{
-        console.log(res)
-        console.log(picList)
-      })
+      
+      // then(res=>{
+      //   console.log(res)
+      //   console.log(picList)
+      // })
       },
 
   /**
