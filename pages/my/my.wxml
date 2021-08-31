@@ -10,4 +10,23 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
+
+
+<view>
+  <text>{{result}}</text>
+  <input bindinput="bindinput1" value="{{num1}}" />
+  <input bindinput="bindinput2" value="{{num2}}" />
+
+  <view class="section">
+  <view class="section__title">普通选择器</view>
+  <picker bindchange="bindPickerChange" value="{{optIndex}}" range="{{opt}}">
+    <view class="picker">
+      当前选择：{{opt[optIndex]}}
+    </view>
+  </picker>
+  </view>
+
+  <button bindtap="jisuan">计算</button>
+</view>
+
 </view>

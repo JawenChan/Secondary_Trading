@@ -9,7 +9,12 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     userInfo:{},
-    openid:""
+    openid:"",
+    result:0,
+    num1:0,
+    num2:0,
+    optIndex:0,
+    opt:["+","-","*","/"]
   },
   onGotUserInfo:function(e){
     const that=this
@@ -77,5 +82,39 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+
+  bindinput1:function(e){
+    this.setData(this.data.num1=e.detail.value)
+    console.log(this.data.num1)
+  },
+  bindinput2:function(e){
+    this.setData(this.data.num2=e.detail.value)
+    console.log(this.data.num2)
+  },
+  bindPickerChange:function(){
+    switch(this.data.optIndex){
+      case '+':
+        return this.data.num1+this.data.num2;
+        break;
+      case "-":
+        return this.data.num1-this.data.num2;
+        break;
+      case "*":
+        return this.data.num1*this.data.num2;
+        break;
+      case "/":
+        return this.data.num1/this.data.num2;
+        break;
+    }
+  },
+  jisuan:function(){
+     var result =this.bindPickerChange()
+    console.log(this.result)
+    this.setData(
+      this.data.result=this.result
+    )
+    
+
   }
 })
